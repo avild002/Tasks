@@ -1,3 +1,3 @@
 export function list() {
-    return "listar tareas"; 
+  return "listar tareas";
 }

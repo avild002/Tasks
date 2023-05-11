@@ -1,4 +1,4 @@
-import {list} from './list.js';
+import { list } from "./list.js";
 
 console.log(list());
 console.log("holaaaa");
