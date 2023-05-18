@@ -4,8 +4,8 @@ export function listTask (sortList) {
     const listTask = document.getElementById("task-list");
     const element = document.createElement("div");
     element.innerHTML = `
-    <div class="container py-2 card text-center mb-8">
-        <div class ="container py-2 ">
+    <div class="container py-2 text-center mb-8">
+        <div class ="container py-2 p-3 mb-2 bg-light text-dark">
             <strong>Tarea :</strong> <input type="text" value = ${sortList[0].name} disabled>
             <strong>prioridad :</strong> <input type="text" value = ${sortList[0].priority} disabled> 
             <strong>Estado :</strong> <input class="form-check-input" type="checkbox" value=""> ${sortList[0].state}
