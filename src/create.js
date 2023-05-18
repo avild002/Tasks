@@ -1,5 +1,5 @@
-import { task } from "./src/task.js";
-import { listTask } from "./src/list.js";
+import { task } from "./task.js";
+import { listTask } from "./list.js";
 
 
 export function createTask(taskName,priorityTask) {
