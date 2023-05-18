@@ -4,18 +4,18 @@ import { listTask } from "./list.js";
 
 export function createTask(taskName,priorityTask) {
     //creo un arreglo para guardar los objetos.
-    const list = [];
+    const listTasks = [];
     // Creo un objeto y lo agrego a un array
-    list.push(new task(taskName,priorityTask));
+    listTasks.push(new task(taskName,priorityTask));
     showMessage();
-    orderList(list);
+    orderList(listTasks);
 
 }
 
 // TODO - No me está organizando el array de objetos por prioridad.  
-function orderList (list){
-    const sortList = list.sort((a,b) => a[0].getPriority() > b[1].getPriority() ? 1 : -1); 
-    listTask(sortList)
+function orderList (listTasks){
+    const orderedTaskList = listTasks.sort((a,b) => a[0].getPriority() > b[1].getPriority() ? 1 : -1); 
+    listTask(orderedTaskList)
 }
 // TODO -  Falta incluir un temporizador al alert.
 function showMessage(){
