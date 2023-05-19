@@ -1,5 +1,7 @@
 // Clase Task
 
+export const list = []; 
+
 export class task {
     
     constructor (taskName,priorityTask) {

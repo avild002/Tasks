@@ -7,11 +7,11 @@ document
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // obtengo los valores del fomrulario
+    // obtengo los valores del formulario
     const name = document.getElementById("fnameTask").value
     const priority = document.getElementById("priority").value
-      
-    // invoco la función crear. 
+    
+    // invoco la función crear.
     createTask(name,priority);
-
+    
   });
