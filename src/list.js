@@ -1,5 +1,5 @@
 
-// TODO - Tengo que revisar como pintar los aobjetos del array sin usar los 
+// TODO - ya se pintan las tareas del array sin ordenar por prioridad
 export function listTask (list,index) {
     console.log("Index en list  =>  " + index);
     const listTask = document.getElementById("task-list");
