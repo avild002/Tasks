@@ -9,15 +9,19 @@ export function createTask(taskName,priorityTask) {
     list.push(new task(taskName,priorityTask));
     showMessage();
     index = list.length - 1; 
-    listTask(list,index);
     //orderList(list,index);
+    listTask(list,index);
+    console.log(list);
     
 }
 
-// TODO - No me está organizando el array de objetos por prioridad.  
-function orderList (list,index){
-    //const sortList = list.sort((a,b) => a.getPriority() > b.getPriority() ? 1 : -1); 
-    //listTask(sortList,index)
+//TODO -  ya funciona el orderList solo falta revisar como pintar en index.html las tareas por la prioridad. 
+function orderList (list, index){
+    if (list.length >= 1) {
+        list.sort((a, b) => b.getPriority() - a.getPriority()); 
+    }
+    
+
 }
 
 // TODO -  Falta incluir un temporizador al alert.
