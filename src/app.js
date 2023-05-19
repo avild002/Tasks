@@ -1,5 +1,7 @@
-//import { task } from "./src/task.js";
+import { task,list } from "./task.js";
 import { createTask } from './create.js';
+import { deleteTask } from './delete.js';
+import { editTask } from './edit.js';
 
 
 document
@@ -14,5 +16,15 @@ document
     // invoco la función crear.
     createTask(name,priority);
     
+});
 
-  });
+document.getElementById("task-list").addEventListener("click", (e) => {
+  deleteTask(e.target);
+  e.preventDefault();
+});
+
+
+document.getElementById("task-list").addEventListener("click", (e) => {
+  editTask(e.target);
+  e.preventDefault();
+});
