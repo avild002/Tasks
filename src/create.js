@@ -10,7 +10,8 @@ export function createTask(taskName,priorityTask) {
     alert("Se ha creado la tarea correctamente..!!");
     index = list.length - 1; 
     listTask(list,index);
-
+    console.log(list);
+    
 }
 
 //TODO -  ya funciona el orderList solo falta revisar como pintar en index.html las tareas por la prioridad. 

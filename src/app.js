@@ -1,4 +1,4 @@
-import { task,list } from "./task.js";
+import { list } from "./task.js";
 import { createTask } from './create.js';
 import { deleteTask } from './delete.js';
 import { editTask } from './edit.js';
@@ -19,7 +19,7 @@ document
 });
 
 document.getElementById("task-list").addEventListener("click", (e) => {
-  deleteTask(e.target);
+  deleteTask(e.target,list);
   e.preventDefault();
 });
 
