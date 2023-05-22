@@ -15,6 +15,8 @@ document
     
     // invoco la función crear.
     createTask(name,priority);
+    document.getElementById("fnameTask").value = "";
+    document.getElementById("priority").value = ""; 
     
 });
 
