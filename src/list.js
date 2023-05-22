@@ -12,7 +12,7 @@ export function listTask (list,index) {
             <strong>Estado :</strong> <input class="form-check-input" type="checkbox" value=""> ${list[index].state}
         <div><br>
         <button type="button" id="${index}" name ="Editar" class="btn btn-info">Editar</button>
-        <button type="button" id="${index}" name = "Eliminar" class="btn btn-danger">Eliminar</button>
+        <button type="button" id="${index}" name = "Eliminar" class="btn btn-danger" disabled>Eliminar</button>
     </div>`;
     listTask.appendChild(element);
 
