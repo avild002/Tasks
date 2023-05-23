@@ -9,21 +9,34 @@ export class task {
         this.priority = priorityTask
         this.state = "Sin completar"; 
     } 
-    assignPriority (priorityTask) {
+
+    assignPriority(priorityTask) {
         this.priority = priorityTask;
     }
-    assignState () {
+
+    assignState() {
         this.state = true;
     }
-    getName(){
+
+    getName() {
         return this.name;
     }
     
-    getPriority () {
+    getPriority() {
         return this.priority;
     }
 
-    getState(){
+    getState() {
         return this.state;
     }
+
+    setName(taskName) {
+        this.name = taskName; 
+
+    } 
+
+    setPriority(priorityTask) {
+        this.priority = priorityTask;
+    }
+
 }
