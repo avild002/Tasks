@@ -7,9 +7,9 @@ export class task {
     constructor (taskName,priorityTask) {
         this.name = taskName;
         this.priority = priorityTask
-        this.state = "Sin completar"; 
+        this.state = " Sin completar "; 
     } 
-
+    
     assignPriority(priorityTask) {
         this.priority = priorityTask;
     }

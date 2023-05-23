@@ -9,11 +9,14 @@ export function listTask (list,index) {
             <div class ="container py-2 p-3 mb-2 bg-light text-dark">
                 <strong>Tarea :</strong> <input type="text"  id="task_+${index}"  value = ${list[index].name} disabled>
                 <strong>prioridad :</strong> <input type="text" id="prio_+${index}"  value = ${list[index].priority} disabled> 
-                <strong>Estado :</strong> <input class="form-check-input" type="checkbox" value=""> ${list[index].state}
+                <strong>Estado :</strong> 
+                <input id="${index}" type = "checkbox" name="status" value="0"> 
+                <label id ="label"> ${list[index].state} </label>
             <div><br>
             <button type="button" id="${index}" name ="Editar" class="btn btn-info">Editar</button>
-            <button type="button" id="${index}" name = "Eliminar" class="btn btn-danger" disabled>Eliminar</button>
-        </div>`;
+            <button type="button" id="${index}" name = "Eliminar" class="btn btn-danger" disabled >Eliminar</button>
+        </div>
+               `;
         listTask.appendChild(element);
 
 }

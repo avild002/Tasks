@@ -2,6 +2,7 @@ import { list } from "./task.js";
 import { createTask } from './create.js';
 import { deleteTask } from './delete.js';
 import { editTask, updateTask } from './edit.js';
+import { markCompleted } from './mark.js';
 
 
 
@@ -35,8 +36,14 @@ document.getElementById("task-list").addEventListener("click", (e) => {
 });
 
 document.getElementById("task-list").addEventListener("click", (e) => {
-  
+
       updateTask(e.target,list);
       e.preventDefault();
+
+});
+
+
+document.getElementById("task-list").addEventListener("click", (e) => {
+  markCompleted(e.target, list);
 
 });

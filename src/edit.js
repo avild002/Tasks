@@ -7,9 +7,10 @@ export function editTask(element) {
         console.log("Valor de index en editar:   "); 
         console.log(indexTask); 
         activeInput(indexTask);
-        createBtn(indexTask);
         const btnEdit = document.getElementById(`${indexTask}`); 
         btnEdit.disabled = true;   
+        createBtn(indexTask);
+        
     }
 
 }
@@ -58,7 +59,7 @@ function createBtn (indexTask) {
 }
 
 function inactivateInput (indexBtn) {
-  
+
     const nameTask = document.getElementById(`task_+${indexBtn}`);
     nameTask.disabled = true;  
     const prioTask = document.getElementById(`prio_+${indexBtn}`);
