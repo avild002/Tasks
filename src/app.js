@@ -8,7 +8,7 @@ import { markCompleted } from './mark.js';
 
 document.getElementById("task-form").addEventListener("submit", function (e) {
       
-      // obtengo los valores del fomrulario
+      // obtengo los valores del formulario
       const name = document.getElementById("fnameTask").value
       const priority = document.getElementById("priority").value
       
