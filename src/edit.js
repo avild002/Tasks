@@ -7,8 +7,7 @@ export function editTask(element) {
         console.log("Valor de index en editar:   "); 
         console.log(indexTask); 
         activeInput(indexTask);
-        const btnEdit = document.getElementById(`${indexTask}`); 
-        btnEdit.disabled = true;   
+        document.getElementById(`${indexTask}`).disabled = true; 
         createBtn(indexTask);
         
     }
@@ -30,8 +29,7 @@ export function updateTask(element, list) {
         console.log(list);
         alert("Se han actualizado los campos correctamente..!!"); 
         element.style.display = "none";
-        const btnEdit = document.getElementById(`${indexBtn}`); 
-        btnEdit.disabled = false;   
+        document.getElementById(`${indexBtn}`).disabled = false; 
         inactivateInput(indexBtn); 
     
     }
@@ -40,10 +38,9 @@ export function updateTask(element, list) {
 
 function activeInput (index) {
 
-    const nameTask = document.getElementById(`task_+${index}`);
-    nameTask.disabled = false;  
-    const prioTask = document.getElementById(`prio_+${index}`);
-    prioTask.disabled = false; 
+    document.getElementById(`task_+${index}`).disabled = false;
+    document.getElementById(`prio_+${index}`).disabled = false;
+    document.getElementById(`status_+${index}`).disabled = false;
 
 }
 
@@ -60,9 +57,8 @@ function createBtn (indexTask) {
 
 function inactivateInput (indexBtn) {
 
-    const nameTask = document.getElementById(`task_+${indexBtn}`);
-    nameTask.disabled = true;  
-    const prioTask = document.getElementById(`prio_+${indexBtn}`);
-    prioTask.disabled = true; 
+    document.getElementById(`task_+${indexBtn}`).disabled = true;
+    document.getElementById(`prio_+${indexBtn}`).disabled = true;
+    document.getElementById(`status_+${indexBtn}`).disabled = true;
 
 }
