@@ -8,6 +8,7 @@ export function editTask(element) {
         console.log(indexTask); 
         activeInput(indexTask);
         document.getElementById(`${indexTask}`).disabled = true; 
+        status(indexTask);
         createBtn(indexTask);
         
     }
@@ -22,15 +23,18 @@ export function updateTask(element, list) {
         console.log(indexBtn); 
         const newNameTask = document.getElementById(`task_+${indexBtn}`).value;
         const newPrioTask = document.getElementById(`prio_+${indexBtn}`).value;
+        const newState    = document.getElementById(`status_+${indexBtn}`).value;  
         console.log("Nuevo nombre "+ newNameTask); 
         console.log("Nueva prio "+ newPrioTask); 
         list[indexBtn].setName(newNameTask);
         list[indexBtn].setPriority(newPrioTask);
+        list[indexBtn].setState(newState);
         console.log(list);
         alert("Se han actualizado los campos correctamente..!!"); 
         element.style.display = "none";
         document.getElementById(`${indexBtn}`).disabled = false; 
         inactivateInput(indexBtn); 
+        document.getElementById(`delete_+${indexBtn}`).disabled = true; 
     
     }
   
@@ -61,4 +65,20 @@ function inactivateInput (indexBtn) {
     document.getElementById(`prio_+${indexBtn}`).disabled = true;
     document.getElementById(`status_+${indexBtn}`).disabled = true;
 
+}
+
+// TODO - Falta ajustar el btb update cuando elimino un task
+function status(indexTask){
+    
+    document.getElementById(`status_+${indexTask}`).addEventListener("click", (e) => {
+        var newState    = document.getElementById(`status_+${indexTask}`).value;  
+        console.log (newState); 
+        if (newState === "Completado") {
+            document.getElementById(`delete_+${indexTask}`).disabled = false; 
+        } else {
+            document.getElementById(`delete_+${indexTask}`).disabled = true; 
+        }
+          
+    });
+        
 }
