@@ -8,7 +8,7 @@ export function listTask (list,index) {
         <div class="container py-2 text-center mb-8" id="lista">
         <div class ="container py-2 p-3 mb-2 bg-light text-dark">
             <strong> Tarea:  </strong> <input type="text"  id="task_+${index}"  value = ${list[index].name} disabled>
-            <strong> Prioridad: </strong> <input type="text" id="prio_+${index}"  value = ${list[index].priority} disabled> 
+            <strong> Prioridad: </strong> <input type="number" id="prio_+${index}"  value = ${list[index].priority} min ="1" max="5" maxlength ="1" disabled> 
             <strong> Estado: </strong>
             <select id="status_+${index}" name="${index}"  disabled>
                <option value="Sin completar"> Sin completar </option>

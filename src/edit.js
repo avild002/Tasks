@@ -1,3 +1,5 @@
+import { deleteTask } from './delete.js';
+import { list } from './task.js';
 
 export function editTask(element) {
         
@@ -51,10 +53,13 @@ function activeInput (index) {
 function createBtn (indexTask) {
 
     const btn = document.getElementById("task-list");
-    const element = document.createElement("div");
+    const element = document.createElement("button");
+    element.attributes = "id=`${indexTask}`"; 
+    /*
     element.innerHTML = `
         <button type="button" id="${indexTask}" name ="update" class="btn btn-secondary">Update</button>
     `;
+    */
     btn.appendChild(element);
 
 }
@@ -71,14 +76,29 @@ function inactivateInput (indexBtn) {
 function status(indexTask){
     
     document.getElementById(`status_+${indexTask}`).addEventListener("click", (e) => {
-        var newState    = document.getElementById(`status_+${indexTask}`).value;  
+        var newState = document.getElementById(`status_+${indexTask}`).value;  
         console.log (newState); 
+        
         if (newState === "Completado") {
             document.getElementById(`delete_+${indexTask}`).disabled = false; 
+            indiceTask(indexTask,list);
+            
         } else {
             document.getElementById(`delete_+${indexTask}`).disabled = true; 
+            
         }
           
     });
         
+}
+
+function indiceTask(indexTask){
+
+    document.getElementById("task-list").addEventListener("click", (e) => {
+      console.log("index en edit :  " + indexTask)
+      deleteTask(e.target,list, indexTask);
+      e.preventDefault();
+
+    });
+
 }
