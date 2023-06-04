@@ -5,10 +5,16 @@
       <title>TODO</title>
    </head>
    <body>
+      <div class="card mb-5">
+         <br>
+         <div><input type="button" class="btn btn-warning" value="Creditos" onclick="msg()"></div>
+         <br>
+      </div>
       <div class="card text-center mb-6">
          <h1 class="display-4 text-center">TODO - MACHINE</h1>
          <p class="text-center">La aplicación te permitirá crear, editar, marcar como completadas y eliminar las tareas.</p>
       </div>
+      
       <div class="container py-2 card text-center mb-6">
          <form id = task-form>
             <strong for="fname"> Nombre de la tarea: </strong>
@@ -34,5 +40,10 @@
 
       <div id="task-list" class=" py-2 card text-center mb-6"></div>
       <script type="module" src="./src/app.js"  ></script>
+      <script>
+         function msg() {
+           alert("Desarrollado por: Claudia Marcela Martinez Monroy - Arturo Vildosola.");
+         }
+         </script>
    </body>
 </html>
