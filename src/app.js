@@ -1,5 +1,6 @@
 import { list } from "./task.js";
 import { createTask } from './create.js';
+import { orderList } from './order.js';
 import { editTask, updateTask } from './edit.js';
 
 
@@ -29,6 +30,17 @@ document.getElementById("task-list").addEventListener("click", (e) => {
 document.getElementById("task-list").addEventListener("click", (e) => {
 
       updateTask(e.target,list);
+      e.preventDefault();
+
+});
+
+
+document.getElementById("ordered").addEventListener("click", (e) => {
+
+      if (list.length >= 1) {
+          list.sort((a, b) => b.getPriority() - a.getPriority()); 
+      }
+      console.log(list);
       e.preventDefault();
 
 });
