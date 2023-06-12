@@ -1,15 +1,13 @@
 
 export function deleteTask(element,list,index) {
-  if (element.name === "Eliminar") {
-    //console.log(index);
-    var a = document.getElementsByClassName("btn btn-secondary");
-          a.style.display = "none";  
-        //document.getElementById(`${index}`).disabled = true; 
-        list.splice(index, 1);
-          console.log(list);
-          //element.parentElement.parentElement.remove();
+    if (element.name === "Eliminar") {
+      const div_update = document.getElementById(`update_+${index}`);
+      div_update.remove(); 
+      list.splice(index, 1);
+      console.log(list);
+      element.parentElement.parentElement.remove();
           
-        }
+    }
 
 }
 

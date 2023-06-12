@@ -15,7 +15,6 @@ export function listTask (list,index) {
                <option value="Completado"> Completado </option>
             </select>
         </div>
-        
         <br>
             <button type="button" id="${index}" name ="Editar" class="btn btn-info">Editar</button>
             <button type="button" id="delete_+${index}" name = "Eliminar" class="btn btn-danger" disabled >Eliminar</button>

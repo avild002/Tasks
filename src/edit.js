@@ -53,14 +53,16 @@ function activeInput (index) {
 function createBtn (indexTask) {
 
     const btn = document.getElementById("task-list");
-    const element = document.createElement("button");
-    element.attributes = "id=`${indexTask}`"; 
-    /*
-    element.innerHTML = `
-        <button type="button" id="${indexTask}" name ="update" class="btn btn-secondary">Update</button>
-    `;
-    */
-    btn.appendChild(element);
+    const div = document.createElement("div");
+    div.setAttribute("id",`update_+${indexTask}`); 
+    div.setAttribute("name","div_update"); 
+    const button = document.createElement("button");
+    button.textContent = "Update";
+    button.setAttribute("id",`${indexTask}`); 
+    button.setAttribute("name","update"); 
+    button.setAttribute("class","btn btn-secondary"); 
+    div.appendChild(button);
+    btn.appendChild(div);
 
 }
 
