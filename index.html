@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <title>Tasks</title>
   </head>
@@ -21,3 +22,74 @@
     </ul>
   </body>
 </html>
+=======
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <head>
+      <title>TODO</title>
+   </head>
+   <body>
+      <div class="card mb-5">
+         <br>
+         <div><input type="button" class="btn btn-warning" value="Créditos" onclick="msg()"></div>
+         <br>
+      </div>
+      <div class="card text-center mb-6">
+         <h1 class="display-4 text-center">TODO - MACHINE</h1>
+         <p class="text-center">La aplicación te permitirá crear, editar, marcar como completadas y eliminar las tareas.</p>
+      </div>
+      <div class="container py-2 card text-center mb-6">
+         <form id = task-form>
+            <strong for="fname"> Nombre de la tarea: </strong>
+            <input type="text" id="fnameTask"  name="nameTask" required>
+            <strong for="fname"> Prioridad: </strong>
+            <select id="priority" name="priorityTask" required>
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+            </select>
+            <div><br><input type="submit" class="btn btn-primary" value="Crear"></div>
+            <br>
+            <div id="message"></div>
+         </form>
+      </div>
+      <!-- Task list -->
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <font color="purple">
+               <h6 class="display-6 text-center"> LISTA DE TAREAS </h6>
+            </font>
+         </div>
+         <div id="task-list" class="column py-2 card text-center mb-6"></div>
+      </div>
+      <!-- button Ordered List Task -->
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <button type="button-ordered" id="ordered" class="btn btn-outline-success">Ordenar por prioridad</button>
+         </div>
+      </div>
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <font color="blue">
+               <h6 class="display-6 text-center"> TAREAS ORDENADAS </h6>
+            </font>
+            <div><input type="button" class="btn btn-outline-primary" value="Limpiar" onclick="limpiar()"></div>
+            <br>
+            <div id="list" class="column py-2 card text-center mb-6"></div>
+         </div>
+      </div>
+      </div>
+      <script type="module" src="./src/app.js"  ></script>
+      <script>
+         function msg() {
+           alert(' Javascript Fundamentals - 2023. \n Desarrollado por: \n Claudia Marcela Martinez Monroy. \n Arturo Vildosola.');
+         }
+         function limpiar() {
+            const div_list = document.getElementById("div_lista_tarea");
+            div_list.remove(); 
+         }
+      </script>
+   </body>
+</html>
+>>>>>>> develop
