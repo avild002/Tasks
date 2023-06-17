@@ -1,46 +1,46 @@
 // Clase Task
 
-export const list = []; 
+export const list = [];
 
 export class task {
-    
-    constructor (taskName,priorityTask) {
-        this.name = taskName;
-        this.priority = priorityTask
-        this.state = "Sin completar"; 
-    } 
-    
-    assignPriority(priorityTask) {
-        this.priority = priorityTask;
-    }
 
-    assignState() {
-        this.state = true;
-    }
+   constructor(taskName, priorityTask) {
+      this.name = taskName;
+      this.priority = priorityTask
+      this.state = "Incompleto";
+   }
 
-    getName() {
-        return this.name;
-    }
-    
-    getPriority() {
-        return this.priority;
-    }
+   assignPriority(priorityTask) {
+      this.priority = priorityTask;
+   }
 
-    getState() {
-        return this.state;
-    }
+   assignState() {
+      this.state = true;
+   }
 
-    setName(taskName) {
-        this.name = taskName; 
+   getName() {
+      return this.name;
+   }
 
-    } 
+   getPriority() {
+      return this.priority;
+   }
 
-    setPriority(priorityTask) {
-        this.priority = priorityTask;
-    }
+   getState() {
+      return this.state;
+   }
 
-    setState (stateTask) {
-        this.state = stateTask; 
-    }
+   setName(taskName) {
+      this.name = taskName;
+
+   }
+
+   setPriority(priorityTask) {
+      this.priority = priorityTask;
+   }
+
+   setState(stateTask) {
+      this.state = stateTask;
+   }
 
 }

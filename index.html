@@ -14,7 +14,6 @@
          <h1 class="display-4 text-center">TODO - MACHINE</h1>
          <p class="text-center">La aplicación te permitirá crear, editar, marcar como completadas y eliminar las tareas.</p>
       </div>
-      
       <div class="container py-2 card text-center mb-6">
          <form id = task-form>
             <strong for="fname"> Nombre de la tarea: </strong>
@@ -32,19 +31,41 @@
             <div id="message"></div>
          </form>
       </div>
-      <!-- button Ordered List Task -->
-      <div class=" py-2 card text-center mb-6" id = "div-button-ordered">
-         <button type="button-ordered" id="ordered" class="btn btn-link  display-6 text-center">Ordenar por prioridad</button></div>
       <!-- Task list -->
-      <div><h6 class="display-6 text-center"> LISTA DE TAREAS </h6></div>
-
-      <div id="task-list" class=" py-2 card text-center mb-6"></div>
-      
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <font color="purple">
+               <h6 class="display-6 text-center"> LISTA DE TAREAS </h6>
+            </font>
+         </div>
+         <div id="task-list" class="column py-2 card text-center mb-6"></div>
+      </div>
+      <!-- button Ordered List Task -->
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <button type="button-ordered" id="ordered" class="btn btn-outline-success">Ordenar por prioridad</button>
+         </div>
+      </div>
+      <div class="container py-2 card text-center mb-6">
+         <div>
+            <font color="blue">
+               <h6 class="display-6 text-center"> TAREAS ORDENADAS </h6>
+            </font>
+            <div><input type="button" class="btn btn-outline-primary" value="Limpiar" onclick="limpiar()"></div>
+            <br>
+            <div id="list" class="column py-2 card text-center mb-6"></div>
+         </div>
+      </div>
+      </div>
       <script type="module" src="./src/app.js"  ></script>
       <script>
          function msg() {
            alert(' Javascript Fundamentals - 2023. \n Desarrollado por: \n Claudia Marcela Martinez Monroy. \n Arturo Vildosola.');
          }
-         </script>
+         function limpiar() {
+            const div_list = document.getElementById("div_lista_tarea");
+            div_list.remove(); 
+         }
+      </script>
    </body>
 </html>
