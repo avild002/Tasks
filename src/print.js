@@ -5,7 +5,6 @@ export function printTask(list) {
  
        list.forEach((task) => {
           showTask(task);
-          console.log(task.name, task.priority, task.state);
        });
  
     }
