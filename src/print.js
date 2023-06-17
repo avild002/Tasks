@@ -1,8 +1,5 @@
 export function printTask(list) {
     if (list.length > 0) {
-       console.log(list.length);
-       console.log(list);
- 
        list.forEach((task) => {
           showTask(task);
        });
